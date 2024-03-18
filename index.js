@@ -32,7 +32,7 @@ app.post('/add', async (req, res) => {
         const { task } = req.body;
         // Insert data from todoData object into the todos table
         await pool.query('INSERT INTO todos (task) VALUES ($1)', [task]);
-        res.status(201).send('Todo added successfully');
+        res.status(201).send('Todo added successfully.');
     } catch (err) {
         console.error('Error adding todo', err);
         res.status(500).send('Server Error');
@@ -44,7 +44,7 @@ app.delete('/delete/:id', async (req, res) => {
     try {
         const { id } = req.params;
         await pool.query('DELETE FROM todos WHERE id = ($1)', [id]);
-        res.status(201).send('Todo deleted successfully');
+        res.status(201).send('Todo deleted successfully.');
     } catch (err) {
         console.error('Error deleting todo', err);
         res.status(500).send('Server Error');
