@@ -54,5 +54,5 @@ app.delete('/delete/:id', async (req, res) => {
 //localhost port
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`server is running on port ${PORT}`);
 });
