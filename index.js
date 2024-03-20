@@ -35,7 +35,7 @@ app.post('/add', async (req, res) => {
         res.status(201).send('Todo added successfully.');
     } catch (err) {
         console.error('Error adding todo', err);
-        res.status(500).send('Server Error');
+        res.status(500).send('There was a Server Error');
     }
 });
 
