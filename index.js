@@ -33,7 +33,7 @@ app.post('/add', async (req, res) => {
         const { task } = req.body;
         // Insert data from todoData object into the todos table
         await pool.query('INSERT INTO todos (task) VALUES ($1)', [task]);
-        res.status(201).send('Todo added successfully.');
+        res.status(201).send('Todo Added successfully.');
     } catch (err) {
         console.error('Error adding todo', err);
         res.status(500).send('Server Error');
